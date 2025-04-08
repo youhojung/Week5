@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+for i in {10..13}; do
+	pinctrl set $i op
+done
+
+while true; do
+	for i in {10..13}; do
+		pinctrl set $i dh
+		sleep 1
+		pinctrl set $i dl
+	done
+done

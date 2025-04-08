@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+for i in {10..12}; do
+	pinctrl set $i op
+	pinctrl set $i dl
+done
+
+while true; do
+	for j in {0..7}; do
+		k=$((  (j>>0) & 1 ))
+		m=$((  (j>>1) & 1 ))
+		n=$((  (j>>2) & 1 ))
+
+		if [ "$k" -eq 1 ]; then
+			pinctrl set 12 dh
+		else
+			pinctrl set 12 dl
+		fi
+		if [ "$m" -eq 1 ]; then
+			pinctrl set 11 dh
+		else
+			pinctrl set 11 dl
+		fi
+		if [ "$n" -eq 1 ]; then
+			pinctrl set 10 dh
+		else
+			pinctrl set 10 dl
+		fi
+		sleep 1
+	done
+done
