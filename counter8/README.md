@@ -14,6 +14,7 @@ for i in {10..12}; do
 	pinctrl set $i op
 	pinctrl set $i dl
 done
+
 while true; do
 	for j in {0..7}; do
 		k=$((  (j>>0) & 1 ))
