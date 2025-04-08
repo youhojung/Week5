@@ -1,4 +1,4 @@
-#domino4
+domino4
 
 led 3개를 이용해 0부터 7까지를 이진수로 나타내는 코드
 
@@ -9,12 +9,10 @@ led 3개를 이용해 0부터 7까지를 이진수로 나타내는 코드
 **코드 전문**
 
 #!/usr/bin/bash
-
 for i in {10..12}; do
 	pinctrl set $i op
 	pinctrl set $i dl
 done
-
 while true; do
 	for j in {0..7}; do
 		k=$((  (j>>0) & 1 ))
