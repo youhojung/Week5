@@ -2,6 +2,10 @@
 
 각 코드에 대해서 gpiozero를 이용해 간략화한 코드
 
+**회로 구성**
+
+![Image](https://github.com/user-attachments/assets/082552c5-b3ac-4ca0-99aa-16e41e41f076)
+
 **동작 시연**
 
 missio2_1
